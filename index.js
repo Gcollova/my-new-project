@@ -13,9 +13,10 @@ express()
   .use(bodyParser.json())
   .use(express.static(path.join(__dirname, "public")))
   .use(bodyParser.urlencoded({ extended: true }))
-  .set("views", path.join(__dirname, "views"))
+  /* .set("views", path.join(__dirname, "views")) */
+  .use(express.static(path.resolve(__dirname, "./client/build")))
   .set("view engine", "ejs")
-  .use(homePageRouter)
+  
   .use(usersRouter)
   .use(postsRouter)
   
