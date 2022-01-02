@@ -1,24 +1,37 @@
 {
-  "name": "commercialista",
-  "version": "1.0.0",
-  "description": "",
+  "name": "node-js-getting-started",
+  "version": "0.3.0",
+  "description": "A sample Node.js app using Express 4",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "test": "node test.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "chalk": "^5.0.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.2",
+    "mongodb": "^4.2.2"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "nodemon": "^2.0.15",
+    "tape": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gcollova/my-new-project.git"
+    "url": "https://github.com/heroku/node-js-getting-started"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Gcollova/my-new-project/issues"
-  },
-  "homepage": "https://github.com/Gcollova/my-new-project#readme",
-  "dependencies": {
-    "express": "^4.17.2"
-  }
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
